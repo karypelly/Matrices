@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("\n\n\t\tStudytonight - Best place to learn\n\n\n");
+
+    int c, d, a[10][10], b[10][10], n, temp;
+    printf("\nEnter the dimension of the matrix: \n\n");
+    scanf("%d", &n);
+
+    printf("\nEnter the %d elements of the matrix: \n\n",n*n);
+    for(c = 0; c < n; c++) // to iterate the rows
+        for(d = 0; d < n; d++) // to iterate the columns
+            scanf("%d", &a[c][d]);
+
+    // finding transpose of a matrix and storing it in b[][]
+    for(c = 0; c < n; c++) // to iterate the rows
+        for(d = 0; d < n; d++) //to iterate the columns
+            b[d][c] = a[c][d];
+
+    // printing the original matrix
+    printf("\n\nThe original matrix is: \n\n");
+    for(c = 0; c < n; c++)   // to iterate the rows
+    {
+        for(d = 0; d < n; d++)   // to iterate the columns
+        {
+            printf("%d\t", a[c][d]);
+        }
+    printf("\n");
+    }
+
+    // printing the transpose of the entered matrix
+    printf("\n\nThe Transpose matrix is: \n\n");
+    for(c = 0; c < n; c++) // to iterate the rows
+    {
+        for(d = 0; d < n; d++)   // to iterate the columns
+        {
+            printf("%d\t", b[c][d]);
+        }
+        printf("\n");
+    }
+}
